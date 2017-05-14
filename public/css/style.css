@@ -1,0 +1,108 @@
+@font-face {
+    font-family: myFont;
+    src: url(josefin-sans/JosefinSans-Light.ttf);
+}
+
+* {
+  font-family: myFont;
+}
+
+
+.container-fluid {
+  background-color: white;
+  border: grey;
+  font-size: 18px;
+}
+
+.home {
+  margin-left: 600px;
+}
+.navbar .navbar-nav {
+  vertical-align: top;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: black
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: black;
+  font-weight: bold;
+}
+.navbar-inverse .navbar-nav>li>a:focus {
+  color: black;
+  font-weight: bold;
+}
+
+.projects-aside {
+  width: 20%;
+}
+
+.portfolioImage {
+  height: 100px;
+  width: 100px;
+  border-radius: 500px;
+  border: 1px black solid;
+}
+
+.portfolioList {
+  list-style: none;
+}
+
+
+.displayProject {
+width: 60%;
+float: right;
+margin-right: 200px;
+padding-left: 100px;
+padding-right: 60px;
+border: 1px lightgrey solid;
+}
+
+.title {
+  text-align: center;
+  text-shadow: 1px 1px lightgray;
+}
+
+h3 {
+  text-shadow: 0.3px 0.3px lightgray;
+}
+.gameShot {
+  width: 800px;
+  height: 400px;
+}
+
+.links {
+  text-decoration: none;
+  color: blue;
+}
+
+.icons {
+  width: 30px;
+  height: 25px;
+}
+
+.portfolioList img {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+}
+
+.portfolioList img:hover {
+   -webkit-filter: none;
+   -moz-filter: none;
+   -ms-filter: none;
+   filter: none;
+}
+
+.webdeveloper {
+  align-items: center;
+border: lightgray 1px solid;
+margin-left: 25px;
+}
+
+ol {
+  list-style: none;
+}
