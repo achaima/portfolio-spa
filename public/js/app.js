@@ -6,17 +6,21 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: '/states/home.html'
     })
-    .state('portfolio', {
-      url: '/portfolio',
-      templateUrl: '/states/portfolio.html'
+    .state('burger-hop', {
+      url: '/burger-hop',
+      templateUrl: '/states/burger-hop.html'
     })
-    .state('projects', {
-      url: '/portfolio/BurgerHop',
-      views: {
-        '': { templateUrl: '/states/portfolio.html'},
-        'main-content@projects': { templateUrl: '/states/partials/_burgerHop.html'},
-        'projects-aside@projects': { templateUrl: '/states/partials/_portfolioList.html'}
-      }
+    .state('event-finder', {
+      url: '/event-finder',
+      templateUrl: '/states/event-finder.html'
+    })
+    .state('clock', {
+      url: '/clock',
+      templateUrl: '/states/clock.html'
+    })
+    .state('movies', {
+      url: '/movies',
+      templateUrl: '/states/movies.html'
     })
     .state('profile', {
       url: '/profile',
