@@ -1,0 +1,31 @@
+<div ng-controller="PortfolioController as portfolio">
+<div class="col-md-9">
+
+
+<img class="projectSlideshow" ng-src="{{portfolio.projects[2].img}}"/>
+
+<button type="button" class="btn btn-default">Javascript</button>
+<button type="button" class="btn btn-default">JQuery</button>
+<button type="button" class="btn btn-default">HTML5</button>
+<button type="button" class="btn btn-default">CSS3</button>
+
+
+<h1 class="title">{{portfolio.projects[2].title}}</h1>
+
+<!-- <h3>Brief:</h3> -->
+<p>{{portfolio.projects[2].desc}}.</p>
+
+<p>Duration: {{portfolio.projects[2].duration}}</p>
+
+<em><p>Want to see for yourself?</p></em>
+
+<p><img class="icons" ng-src="/images/github.png"/><a href="{{portfolio.projects[2].githubLink}}" class="links">Github</a></p>
+<p><img class="icons" ng-src="/images/heroku.png"/><a href="{{portfolio.projects[2].herokuLink}}" class="links">Heroku</a></p>
+</div>
+
+
+<ul class="col-md-offset-10">
+  <li ng-repeat="project in portfolio.projects track by $index" class="portfolioList" ui-sref="{{project.state}}">
+    <img ng-src="{{project.img}}" class="portfolioImage" /></li>
+</ul>
+</div>
