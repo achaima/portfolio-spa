@@ -14,7 +14,7 @@
    </div>
   </div>
 
-  <ul class="projectUL" ng-mouseenter="project.gif" ng-mouseleave="show = false">
+  <ul ng-mouseenter="project.gif" ng-mouseleave="show = false">
     <li ng-repeat="project in portfolio.projects track by $index" class="projectsList" ng-show="project.img">
       <div class="project-box" ui-sref="{{project.state}}">
        <div class="portfolioProjectImage {{project.class}}"></div>

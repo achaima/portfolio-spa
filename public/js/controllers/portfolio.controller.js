@@ -74,8 +74,6 @@ function PortfolioController() {
   init();
 }
 
-
-
 angular
  .module('PortfolioApp')
  .controller('PortfolioController', PortfolioController);
