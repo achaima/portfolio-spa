@@ -146,10 +146,9 @@ ol {
 
 .portfolioProjectImage {
   margin-top: 5px;
-  margin-left: 8.5px;
+  margin-left: 3.7px;
   height: 320px;
   width: 340px;
-  border-radius: 2px;
   border: darkgray 1px solid;
 }
 
@@ -158,18 +157,27 @@ ol {
   box-shadow: 2px 1px 1px lightgray;
   border: darkgray 1px solid;
   font-weight: bold;
-  height: 390px;
-  width: 360px;
+  height: 350px;
+  width: 350px;
   margin-right: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
+}
+
+.project-box:hover {
+  background-color:#1a1a1a;
+  color: white;
 }
 
 
 .projectPolaroidTitle {
   margin-left: 130px;
-  margin-top: 15px;
+  margin-top: 320px;
   font-size: 15px;
   color: black;
+}
+
+.projectPolaroidTitle:hover {
+  color: white;
 }
 
 
@@ -239,4 +247,20 @@ ol {
 .placeholderTwo:hover {
   background: url() center center no-repeat;
   transition: background .2s linear;
+}
+
+.section-box {
+  margin-top: 90px;
+  padding-top: 30px;
+  padding-bottom: -30px;
+}
+.un-selected-section {
+  font-family: 'Rambla', sans-serif;
+  transition: all .2s linear;
+  font-size: 30px;
+}
+.selected-section {
+  font-family: 'Rambla', sans-serif;
+  font-size: 45px;
+  transition: all .2s linear;
 }

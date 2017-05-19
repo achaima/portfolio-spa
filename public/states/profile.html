@@ -1,8 +1,65 @@
 
+<div ng-controller="ProfileController as profile">
+  <div class="background-properties" ng-class="profile.image">
+
+    <div id="sidebar" class="col-md-4">
+      <section class="section-box">
+        <h1 ng-mouseover="profile.showProfile()"
+            ng-class="{'un-selected-section': !profile.isProfileVisible,
+                       'selected-section': profile.isProfileVisible}">Profile</h1>
+      </section>
+      <section class="section-box">
+        <h1 ng-mouseover="profile.showSkills()"
+            ng-class="{'un-selected-section': !profile.isSkillsVisible,
+                       'selected-section': profile.isSkillsVisible}">Skills</h1>
+      </section>
+      <section class="section-box">
+        <h1 ng-mouseover="profile.showEducation()"
+            ng-class="{'un-selected-section': !profile.isEducationVisible,
+                       'selected-section': profile.isEducationVisible}">Education</h1>
+      </section>
+      <section class="section-box">
+        <h1 ng-mouseover="profile.showProfessional()"
+            ng-class="{'un-selected-section': !profile.isProfessionalVisible,
+                       'selected-section': profile.isProfessionalVisible}">Professional</h1>
+      </section>
+    </div>
+
+
+
+    <div id="page-content" class="col-md-8">
+      <section ng-if="profile.isProfileVisible" class="section-content-container" id="profile">
+      </section>
+
+      <section ng-if="profile.isSkillsVisible" class="section-content-container">
+        <p>These are my skills</p>
+      </section>
+
+      <section ng-if="profile.isEducationVisible" class="section-content-container">
+        <p>This is my education history This is my education history This is my education history This is my education history This is my education history This is my education history This is my education history</p>
+      </section>
+
+      <section ng-if="profile.isProfessionalVisible" class="section-content-container">
+        <p>This is my professional experience</p>
+      </section>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <ol>
-
-
-
   <h3>Education</h3>
 
 <h5>LLB Law (2.1)</h5>
@@ -52,12 +109,4 @@
 <h3>Skills</h3>
 </ol>
 
-
-
-
-
-
-
-
-
-<img class="webDeveloperDiagram" ng-src="/images/webDeveloperDiagram.png"/>
+<img class="webDeveloperDiagram" ng-src="/images/webDeveloperDiagram.png"/> -->
