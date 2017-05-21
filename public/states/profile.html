@@ -2,45 +2,70 @@
 <div ng-controller="ProfileController as profile">
   <div class="background-properties" ng-class="profile.image">
 
-    <div id="sidebar" class="col-md-4">
-      <section class="section-box">
+    <div id="sidebar" class="col-md-7">
+      <!-- <section class="section-box"> -->
         <h1 ng-mouseover="profile.showProfile()"
             ng-class="{'un-selected-section': !profile.isProfileVisible,
-                       'selected-section': profile.isProfileVisible}">Profile</h1>
-      </section>
+                       'selected-section': profile.isProfileVisible}">Asma Chaima</h1>
+                       <p>yo yo </p>
+      <!-- </section> -->
       <section class="section-box">
         <h1 ng-mouseover="profile.showSkills()"
             ng-class="{'un-selected-section': !profile.isSkillsVisible,
                        'selected-section': profile.isSkillsVisible}">Skills</h1>
       </section>
+
+    <div class="col-md-6">
       <section class="section-box">
         <h1 ng-mouseover="profile.showEducation()"
             ng-class="{'un-selected-section': !profile.isEducationVisible,
                        'selected-section': profile.isEducationVisible}">Education</h1>
+
+                               <h5>LLB Law (2.1)</h5>
+
+                               <p>University of Hertfordshire | 2011-2014</p>
+
+                               <h5>History (B), Politics (B), Sociology (B)</h5>
+
+                               <p>Sir George Monoux College | 2009-2011</p>
+
+                               <h5>11 GCSE'S A*-B</h5>
+
+                               <p>Park View Academy | 2004-2009</p>
       </section>
+    </div>
+
+    <div class="col-md-offset-6">
       <section class="section-box">
         <h1 ng-mouseover="profile.showProfessional()"
             ng-class="{'un-selected-section': !profile.isProfessionalVisible,
                        'selected-section': profile.isProfessionalVisible}">Professional</h1>
+
       </section>
+    </div>
     </div>
 
 
+<!--****************************************************************************************************-->
 
-    <div id="page-content" class="col-md-8">
+
+    <div id="page-content" class="col-md-offset-7">
       <section ng-if="profile.isProfileVisible" class="section-content-container" id="profile">
+        <img width="470px" ng-src="../images/me.jpg"/>
       </section>
 
       <section ng-if="profile.isSkillsVisible" class="section-content-container">
-        <p>These are my skills</p>
+        <ul>
+          <li ng-repeat="skill in profile.skills" class="skillsList">
+          <img ng-src="{{skill.img}}" class="skillImage"><p class="skillsTitle">{{skill.title}}</p></li>
+        </ul>
       </section>
 
+
       <section ng-if="profile.isEducationVisible" class="section-content-container">
-        <p>This is my education history This is my education history This is my education history This is my education history This is my education history This is my education history This is my education history</p>
       </section>
 
       <section ng-if="profile.isProfessionalVisible" class="section-content-container">
-        <p>This is my professional experience</p>
       </section>
     </div>
   </div>
@@ -88,25 +113,9 @@
 
 
   <li><h3>Employment History</h3>
-<h5>  Junior Business Analyst/Software Tester | Lloyd's banking Group</h5>
 
-  <p>Project: Basel III Liquidity Regulatory project</p>
-
-  <p>Technology: HP ALM, MSSQL 2008, MS VISIO and AXIS (change management tool)</p>
-
-  <ul>
-    <li>Involved in Test planning, Test execution and Defect management</li>
-    <li>Raising and managing change request in change management tool (AXIS)</li>
-    <li>Creation of overarching technical solution documents.</li>
-    <li>Creation of a number of user guides for different processes.</li>
-    <li>Creating and monitoring project spreadsheets</li>
-  </ul></li>
-</ol>
-<ol>
-
-<h5> Junior Business Analyst/Software Tester | Sparta Global</h5>
 
 <h3>Skills</h3>
 </ol>
 
-<img class="webDeveloperDiagram" ng-src="/images/webDeveloperDiagram.png"/> -->
+ -->

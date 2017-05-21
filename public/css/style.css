@@ -10,6 +10,7 @@
 
 * {
   font-family: myFont;
+  /*background-color: rgba(230,230,230, 0.3);*/
 }
 
 .nameLogo {
@@ -249,18 +250,32 @@ ol {
   transition: background .2s linear;
 }
 
+
 .section-box {
   margin-top: 90px;
   padding-top: 30px;
   padding-bottom: -30px;
 }
 .un-selected-section {
-  font-family: 'Rambla', sans-serif;
   transition: all .2s linear;
   font-size: 30px;
 }
 .selected-section {
-  font-family: 'Rambla', sans-serif;
   font-size: 45px;
   transition: all .2s linear;
+}
+
+.skillsList {
+  display: inline-block;
+}
+
+.skillImage {
+  width: 80px;
+  height: 80px;
+  margin: 30px;
+}
+
+.skillsTitle {
+  align-items: center;
+  text-align: center;
 }
