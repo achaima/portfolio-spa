@@ -3,21 +3,21 @@
   <div class="col-md-offset-3">
    <div class="container">
     <div class="btn-group">
-      <button type="button" class="btn btn-default">AngularJS</button>
-      <button type="button" class="btn btn-default">Node.Js</button>
-      <button type="button" class="btn btn-default">Express</button>
-      <button type="button" class="btn btn-default">Javascript</button>
-      <button type="button" class="btn btn-default">jQuery</button>
-      <button type="button" class="btn btn-default">Karma</button>
-      <button type="button" class="btn btn-default">Jasmine</button>
+      <button ng-click="portfolio.filter('AngularJS')" type="button" class="btn btn-default">AngularJS</button>
+      <button ng-click="portfolio.filter('Node.js')" type="button" class="btn btn-default">Node.js</button>
+      <button ng-click="portfolio.filter('Express')" type="button" class="btn btn-default">Express</button>
+      <button ng-click="portfolio.filter('Javascript')" type="button" class="btn btn-default">Javascript</button>
+      <button ng-click="portfolio.filter('jQuery')"  type="button" class="btn btn-default">jQuery</button>
+      <button ng-click="portfolio.filter('Firebase')" type="button" class="btn btn-default">Firebase</button>
+      <button type="button" class="btn btn-default">Show all</button>
     </div>
    </div>
   </div>
 
   <ul ng-mouseenter="project.gif" ng-mouseleave="show = false">
-    <li ng-repeat="project in portfolio.projects track by $index" class="projectsList" ng-show="project.img">
-      <div class="project-box" ui-sref="{{project.state}}">
-       <div class="portfolioProjectImage {{project.class}}"><p class="projectPolaroidTitle">{{project.title}}</p></div>
+    <li ng-repeat="project in portfolio.projects track by $index" class="projectsList">
+      <div ng-if="project.visible" class="project-box" ui-sref="{{project.state}}">
+       <div class="portfolioProjectImage {{project.class}}"></div>
      </div>
     </li>
   </ul>
