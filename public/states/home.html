@@ -15,9 +15,9 @@
 <div ng-controller="PortfolioController as portfolio">
   <h3>PROJECTS</h3>
   <hr class="short-line">
-  <div class="col-md-offset-3">
-   <div class="container">
-    <div class="btn-group">
+
+
+    <div class="btn-group col-md-offset-2">
       <button ng-click="portfolio.filter('AngularJS')" type="button" class="btn btn-default">AngularJS</button>
       <button ng-click="portfolio.filter('Node.js')" type="button" class="btn btn-default">Node.js</button>
       <button ng-click="portfolio.filter('Express')" type="button" class="btn btn-default">Express</button>
@@ -26,39 +26,49 @@
       <button ng-click="portfolio.filter('Firebase')" type="button" class="btn btn-default">Firebase</button>
       <button ng-click="portfolio.showAll()" type="button" class="btn btn-default">Show all</button>
     </div>
-   </div>
-  </div>
 
-  <ul ng-mouseenter="project.gif" ng-mouseleave="show = false">
+
+
+  <ul ng-mouseenter="project.gif" ng-mouseleave="show = false" class="portfolioHome">
     <li ng-repeat="project in portfolio.projects track by $index" class="projectsList">
-      <div ng-if="project.visible" class="project-box" ui-sref="{{project.state}}">
-       <div class="portfolioProjectImage {{project.class}}"></div>
-     </div>
+
+       <div class="portfolioProjectImage {{project.class}}" ng-if="project.visible"            ui-sref="{{project.state}}"></div>
     </li>
   </ul>
 </div>
 
 
 
- <div id="about" class="about">
+ <div  class="text-center">
     <h3>About</h3>
     <hr class="short-line">
 
 
-
+<div class="center">
   <img ng-src="../images/me.jpg" class="profilePic"/>
-  <div ng-controller="ProfileController as profile">
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
   <div class="icon-container">
     <a href="mailto:asmachaima93@gmail.com?Subject=Mail%20from%20website" target="_top">
        <img ng-src="../images/mail.png" class="profile-mail"/>
     </a>
     <a href="../..images/Asma-Chaima-CV.pdf" download="">
-       <img ng-src="../images/cv.png" class="cv"/>
+       <img ng-src="../images/cv.jpg" class="cv"/>
      </a>
+    <a href="https://github.com/achaima" download="">
+       <img ng-src="../images/skills/github.png" class="ProfileIcon"/>
+     </a>
+     <a href="https://github.com/achaima" download="">
+        <img ng-src="../images/linkedIn.png" class="ProfileIcon"/>
+      </a>
 </div>
+</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div ng-controller="ProfileController as profile">
+
+
+
+
   <div class="col-md-4">
   <h3 class="skillsTitle">Skills</h3>
     <ul class="skillsUL">

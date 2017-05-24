@@ -1,15 +1,9 @@
 
 <div ng-controller="PortfolioController as portfolio">
-<div class="col-md-9">
+<div class="col-md-10 projectPage">
 
 
 <img class="projectSlideshow" ng-src="{{portfolio.projects[0].img}}"/>
-
-<button type="button" class="btn btn-default">Javascript</button>
-<button type="button" class="btn btn-default">JQuery</button>
-<button type="button" class="btn btn-default">HTML5</button>
-<button type="button" class="btn btn-default">CSS3</button>
-
 
 <h1 class="title">{{portfolio.projects[0].title}}</h1>
 
@@ -27,6 +21,9 @@
 
 <ul class="col-md-offset-10">
   <li ng-repeat="project in portfolio.projects track by $index" class="portfolioList" ui-sref="{{project.state}}">
-    <img ng-src="{{project.img}}" class="portfolioImage" /></li>
+    <div class="projectsListBox">
+      <img ng-src="{{project.img}}" class="portfolioImage" />
+    </div>
+ </li>
 </ul>
 </div>
