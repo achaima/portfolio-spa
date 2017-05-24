@@ -1,5 +1,20 @@
-<div ng-controller="PortfolioController as portfolio">
+<!--home-->
 
+<div id="home" class="jumbotron">
+  <div class="box-container">
+    <div class="box">
+      <h> Hello World! </h>
+      <p>Welcome</p>
+    </div>
+  </div>
+</div>
+
+
+<!--projects-->
+
+<div ng-controller="PortfolioController as portfolio">
+  <h3>PROJECTS</h3>
+  <hr class="short-line">
   <div class="col-md-offset-3">
    <div class="container">
     <div class="btn-group">
@@ -9,7 +24,7 @@
       <button ng-click="portfolio.filter('Javascript')" type="button" class="btn btn-default">Javascript</button>
       <button ng-click="portfolio.filter('jQuery')"  type="button" class="btn btn-default">jQuery</button>
       <button ng-click="portfolio.filter('Firebase')" type="button" class="btn btn-default">Firebase</button>
-      <button type="button" class="btn btn-default">Show all</button>
+      <button ng-click="portfolio.showAll()" type="button" class="btn btn-default">Show all</button>
     </div>
    </div>
   </div>
@@ -22,3 +37,87 @@
     </li>
   </ul>
 </div>
+
+
+
+ <div id="about" class="about">
+    <h3>About</h3>
+    <hr class="short-line">
+
+
+
+  <img ng-src="../images/me.jpg" class="profilePic"/>
+  <div ng-controller="ProfileController as profile">
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <div class="icon-container">
+    <a href="mailto:asmachaima93@gmail.com?Subject=Mail%20from%20website" target="_top">
+       <img ng-src="../images/mail.png" class="profile-mail"/>
+    </a>
+    <a href="../..images/Asma-Chaima-CV.pdf" download="">
+       <img ng-src="../images/cv.png" class="cv"/>
+     </a>
+</div>
+  <div class="col-md-4">
+  <h3 class="skillsTitle">Skills</h3>
+    <ul class="skillsUL">
+      <li ng-repeat="skill in profile.skills track by $index" class="skillsList">
+        <figure>
+          <img ng-src="{{skill.img}}" class="skillImage"/>
+            <figcaption>
+                {{skill.title}}
+            </figcaption>
+        </figure>
+       </li>
+    </ul>
+  </div>
+
+
+  <div class="col-md-offset-6 col-md-3">
+  <h3 class="interestsTitle">Education</h3>
+
+  <ol class="list-group">
+         <li>
+             <h5>LLB Law (2.1)</h5>
+             <p>University of Hertfordshire | 2011-2014 </p>
+         </li>
+         <li>
+             <h5>History (B), Politics (B), Sociology (B)</h5>
+             <p>Sir George Monoux College | 2009-2011</p>
+         </li>
+
+         <li>
+             <h5>11 GCSE'S A*-B </h5>
+             <p>Park View Academy | 2004-2009 </p>
+         </li>
+       </ol>
+
+
+  </div>
+  <div class="col-md-offset-9 col-md-3 workHistory">
+  <h3 class="interestsTitle">Work</h3>
+    <h5>Sparta Global</h5>
+    <p>Junior Web Developer Consultant | </p>
+      <p>Feb 2017 - Dec 2017</p>
+
+    <h5>Lloyds Banking Group</h5>
+    <p>Junior BA/Software tester | </p>
+      <p>June 2016 - Dec 2016</p>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<!----- ----->
+  <!-- <div id="contact" class="bottom">
+    <hr class="longer-line">
+  </div>
+
+  <div class="copyright">
+    <center> © Asma Chaima 2017 </center>
+  </div> -->

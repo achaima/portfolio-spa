@@ -1,74 +1,195 @@
-@font-face {
-    font-family: myFont;
-    src: url(josefin-sans/JosefinSans-Light.ttf);
-}
-
-
-@font-face {
-    font-family: nameLogo;
-    src: url(remachine_script/RemachineScript_Personal_Use.ttf);
-  }
-
-* {
-  font-family: myFont;
-}
-
-.nameLogo {
-  color: #008080;
-  font-size: 80px;
-  font-family: nameLogo;
-  text-shadow: 1px 1px 1px darkgray;
-  display: flex;
-  justify-content: center;
-}
-
-
-nav {
-  border: none !important;
-  position: fixed;
-  background: none !important;
-  top: 0;
-  margin-top: -10px;
-}
-
-nav:after {
-  content: '';
-  position: absolute;
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open Sans');
+html,
+body {
   width: 100%;
-  height: 2px;
-  top: 42px;
-  background-color: black;
+  height: 100%;
 }
 
-.navbar .navbar-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  letter-spacing: .1em;
+// navigation bar
+
+.top {
+  position: fixed !important;
+  top: 0px !important;
+}
+
+.navbar-toggle {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: white;
+
+}
+
+.navbar,
+container {
+  background:white;
+  min-height: 45px;
+  height: 45px;
+}
+
+.navbar-collapse {
+  text-align: right;
+}
+
+//navigation text
+#navbar {
+  padding-right: 5%;
+}
+
+p .topnav {
+  padding-left: 5%;
+}
+
+.topnav .navbar-brand {
+  font-size: 15px;
+  font-family: Montserrat;
+  letter-spacing: 3px;
+  color: black;
   text-transform: uppercase;
 }
 
-.navbar-inverse {
-  margin-bottom: 0px;
+.topnav ul.nav li a {
+  font-size: 12px;
+  font-family: Montserrat;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-.navbar-inverse .navbar-nav>li>a {
-  color: black;
-}
-.navbar-inverse .navbar-nav>li>a:hover {
-  color: black;
-  font-weight: bold;
-}
-.navbar-inverse .navbar-nav>li>a:focus {
-  color: black;
-  font-weight: bold;
+.topnav ul.nav li a:hover {
+  text-decoration: underline;
 }
 
 .mail {
-  height: 30px;
-  width: 30px;
-  margin-top: -5px;
-  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+
+//home
+.jumbotron {
+  background-size: cover;
+  text-align: center;
+  height: 65vh;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/d5/e3/4a/d5e34a5a8d2e8d6fc5cc662f2411668a.jpg");
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 6px;
+}
+.box-container {
+  padding-top: 12vh;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, .8);
+  margin: auto;
+  width: 30vh;
+  padding: 5vh;
+  text-align: center;
+}
+
+.jumbotron h {
+  font-family: Montserrat;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.jumbotron p {
+  font-family: Open Sans;
+  font-size: 15px;
+}
+
+.profilePic {
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  border: white solid 2px;
+  filter: grayscale(100%);
+  display: inline;
+  -ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+    transform: rotate(-20deg);
+}
+
+//portfolio
+#projects {
+  padding-top: 10px;
+}
+
+h3 {
+  text-align: center;
+  font-family: Montserrat;
+  padding: 18px;
+}
+
+.short-line {
+  border-color: #b76e79;
+  width: 4vh;
+}
+
+
+
+
+//about
+.about {
+  padding-top: 10px;
+  margin: 0 11vh;
+  text-align: center;
+}
+
+h3 {
+  font-family: Montserrat;
+  font-size: 18px;
+}
+
+p.large-text {
+  text-align: justify;
+  font-family: Open Sans;
+}
+
+//footer
+.bottom {
+  padding-top: 10px;
+  font-family: Montserrat;
+  font-size: 24px;
+  bottom: 0;
+  height: 180px;
+  text-align: center;
+}
+
+.longer-line {
+  margin: 40px;
+}
+
+.fcc-icon {
+  width: 5vh;
+  padding-bottom: 3px;
+}
+
+a {
+  color: inherit;
+}
+
+.icons,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+#aw-icon {
+  letter-spacing: 2px;
+}
+
+.copyright {
+  font-family: Open Sans;
+  font-size: 8px;
+  margin: 10px;
 }
 
 .portfolioImage {
@@ -115,11 +236,6 @@ nav:after {
    -ms-filter: none;
    filter: none;
 }
-
-ol {
-  list-style: none;
-}
-
 
 .btn  {
   margin: 10px;
@@ -251,23 +367,19 @@ ol {
   transition: background .2s linear;
 }
 
-
-.section-box {
-  margin-top: 90px;
-  padding-top: 30px;
-  padding-bottom: -30px;
-}
-.un-selected-section {
-  transition: all .2s linear;
-  font-size: 30px;
-}
-.selected-section {
-  font-size: 45px;
-  transition: all .2s linear;
+.icon-container img{
+  align-items: center;
+  width: 50px;
 }
 
-.skills {
+.cv {
+  height: 40px;
+}
+
+
+.skillsUL {
   padding: 0;
+  margin: 0;
 }
 
 .skillsList {
@@ -276,26 +388,90 @@ ol {
 }
 
 .skillImage {
-  width: 60px;
-  height: 60px;
-  margin-right:50px;
-  margin-bottom: 30px;
+  width: 40px;
+  height: 50px;
+  margin-right:5px;
+  margin-bottom: 10px;
+  box-shadow: 0 20px 15px -1px hsla(0,0%,0%,.25);
+  display: block;
+  height: 60%;
+  -webkit-transition: .5s;
 }
 
 .skillsTitle {
-  align-items: center;
+  border: 3px solid rgb(0, 128, 128);
+  letter-spacing: 0.1em;
+  font-size: bold;
+  text-transform: uppercase;
+  width: 100px;
   text-align: center;
+  padding: 7px 2px;
+  color: rgb(0, 128, 128);
+}
+
+figure {
+    height: 7em;
+    width: 6em;
+    -webkit-transform: perspective(500);
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: .5s;
+}
+figure:hover {
+    -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
+}
+/*img {
+    box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
+    display: block;
+    height: 100%;
+    -webkit-transition: .5s;
+}*/
+figure:hover img {
+    box-shadow: none;
+}
+figcaption {
+    color: #fff;
+    padding: 15px 0px;
+    text-align: center;
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin: 100% 0;
+    -webkit-transition: .5s;
+}
+figure:hover figcaption {
+    box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
+    color: #222;
 }
 
 
-.profilePicture {
-  height: 200px;
-  width: 200px;
+.interestsTitle {
+  border: 3px solid rgb(0, 128, 128);
+  letter-spacing: 0.1em;
+  font-size: bold;
+  text-transform: uppercase;
+  width: 140px;
+  text-align: center;
+  padding: 7px 2px;
+  color: rgb(0, 128, 128);
 }
 
+/*div {
+  border: 1px dotted black;
+}*/
 
-h2 {
-  border: 2px solid $lightestBlue;
-  padding: .5em;
-  display: inline-block;
+
+.col-md-offset-6 {
+  margin-left: 30px;
+
+}
+
+.col-md-offset-9 {
+  margin-left: 100px;;
+}
+
+.list-group {
+  list-style: none;
+}
+
+.list-group li {
+  margin-top: 5px;
+  margin-bottom: 45px;
 }

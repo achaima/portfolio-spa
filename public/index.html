@@ -26,14 +26,14 @@
 
 <body>
 
-<div class="position" position="fixed">
+<div>
   <ng-include src="'states/header.html'"></ng-include>
 </div>
-  <div class="container">
-    <div class="row">
-     <section ui-view class="section-container"></section>
-   </div>
-  </div>
+<div class="container">
+  <section class="section-container" ui-view>
+
+  </section>
+</div>
 
 </body>
 </html>

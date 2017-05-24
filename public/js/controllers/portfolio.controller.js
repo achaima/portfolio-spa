@@ -85,6 +85,12 @@ function PortfolioController() {
     });
   };
 
+  controller.showAll = function() {
+    controller.projects.forEach(function(project) {
+      project.visible = true;
+    });
+  };
+
 
   function init() {
     console.log(controller);
