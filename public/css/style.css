@@ -5,6 +5,7 @@ body {
   height: 100%;
 }
 
+
 // navigation bar
 
 .top {
@@ -105,16 +106,7 @@ p .topnav {
   font-size: 15px;
 }
 
-.profilePic {
-  width: 140px;
-  height: 140px;
-  border-radius: 70px;
-  border: white solid 2px;
-  display: inline;
-  -ms-transform: rotate(-20deg); /* IE 9 */
-    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
-    transform: rotate(-20deg);
-}
+
 
 
 //portfolio
@@ -169,7 +161,6 @@ padding: 50px;
 }
 
 .portfolioProjectImage:hover {
-
   border: 3px rgba(138,210,219,0.6) solid;
 }
 
@@ -252,6 +243,17 @@ padding: 50px;
   text-align: center;
 }
 
+.profilePic {
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  border: white solid 2px;
+  display: inline;
+  -ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+    transform: rotate(-20deg);
+}
+
 h3 {
   font-family: Montserrat;
   font-size: 18px;
@@ -303,36 +305,59 @@ a:hover {
 
 
 
-.projectPage {
-  background-color: rgba(49,53,53,0.5);
-
+.project-container {
+  margin-top:90px !important;
 }
 
+.projectPage {
+  border: 2px rgba(49,53,53,0.5) solid;
+  width: 70%;
+  margin-right: 0px;
+  border-radius: 10px;
+}
+
+
 .projectsListBox {
+  padding: 3.1px;
   background-color: red;
-  border: 1px dotted black;
   width: 20vw;
+  background-color: rgb(25,112,112);
+}
+
+.projectsListTitle {
+  display: inline;
+  font-family: bold;
+  color: #25a7a7;
+  font-family: Montserrat;
+letter-spacing: 0.3px;
 }
 
 .portfolioImage {
+  display: inline;
   height: 100px;
   width: 100px;
   border: 1px black solid;
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-top: 3px;
+  margin-left: 3px;
 }
 
 .portfolioList {
   list-style: none;
 }
 
+/*
 .projectSlideshow {
-  width: 600px;
-  height: 400px;
-  margin-bottom: 10px;
-  padding: 0;
   border: 1px lightgray solid;
+  width: 400px;
+  height: 400px;
+}*/
+
+.image-holder {
+width: 200px;
+height: 200px;
+background-color: red;
 }
+
 
 .links {
   text-decoration: none;
@@ -469,9 +494,7 @@ figure:hover figcaption {
   color: rgb(0, 128, 128);
 }
 
-/*div {
-  border: 1px dotted black;
-}*/
+
 
 
 .col-md-offset-6 {
