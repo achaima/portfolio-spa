@@ -4,7 +4,10 @@ function MainRouter($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: '/states/home.html'
+      views: {
+        '': { templateUrl: '/states/home.html' },
+        'header@home': { templateUrl: '/states/partials/header.html' }
+      }
     })
     .state('burger-hop', {
       url: '/burger-hop',
