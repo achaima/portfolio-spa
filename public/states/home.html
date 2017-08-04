@@ -13,7 +13,7 @@
   <hr class="short-line">
 
 
-    <div class="btn-group col-md-offset-2">
+    <div class="btn-group col-md-offset-2"   ng-hide="portfolio.projectContainer">
       <button ng-click="portfolio.filter('AngularJS')" type="button" class="btn btn-success">AngularJS</button>
       <button ng-click="portfolio.filter('Node.js')" type="button" class="btn btn-success">Node.js</button>
       <button ng-click="portfolio.filter('Express')" type="button" class="btn btn-success">Express</button>
@@ -37,20 +37,26 @@
        <div class="portfolioProjectImage {{project.class}}"
             ng-if="project.visible"
             ng-click="portfolio.selectProject(project)">
-            </div>
+       </div>
     </li>
   </ul>
 </div>
 
   <!---PORTFOLIO INDIVIDUAL PROJECT-->
 
+
            <div class="projectInfo projectPage d-flex justify-content-center"
                 ng-show="portfolio.projectContainer"
                 ng-repeat="project in portfolio.projects"
                 ng-if="project.isProjectVisible">
 
+                <button type="button" class="close" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+
              <img class="projectInfoImage img-responsive col-md-3"
                   ng-src="{{project.img}}"/>
+
 
 
             <div class="col-md-5 projectText">
@@ -61,9 +67,9 @@
 
                  <em><p>Want to see for yourself?</p></em>
                <p><img class="icons" ng-src="/images/github.png"/>
-                 <a href="{{project.githubLink}}" target="_blank" class="links">Github</a></p>
+                 <a href="{{project.githubLink}}" target="_blank" class="links">View Code</a></p>
                <p>
-                 <img class="icons" ng-src="/images/heroku.png"/><a href="{{project.herokuLink}}" target="_blank" class="links">Heroku</a></p>
+                 <img class="icons" ng-src="/images/heroku.png"/><a href="{{project.herokuLink}}" target="_blank" class="links">View App</a></p>
             </div>
 
             <div ng-show="portfolio.projectContainer"  class="col-md-3 projectListContainer">

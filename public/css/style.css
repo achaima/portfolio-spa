@@ -234,7 +234,7 @@ padding: 50px;
 .projectPage {
   border: 2px rgba(49,53,53,0.5) solid;
     display: inline-flex;
-    height: 65vh;
+    height: 67vh;
     width: 84%;
     padding: 0;
     margin: 0;
@@ -244,8 +244,18 @@ padding: 50px;
 }
 
 
+.close {
+  z-index: 1;
+  margin-left: 5px;
+position: absolute;
+font-size:30px;
+color: red;
+text-shadow: 0 1px 0 #fff;
+opacity: 1;
+}
+
 .projectInfoImage{
-      height: 41.85em;
+      height: 40.5em;
       width: 35em;
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
