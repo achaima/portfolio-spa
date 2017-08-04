@@ -50,8 +50,10 @@
                 ng-repeat="project in portfolio.projects"
                 ng-if="project.isProjectVisible">
 
-                <button type="button" class="close" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
+                <button type="button" class="close" aria-label="Close" >
+                  <span aria-hidden="true"
+                        ng-click="portfolio.projectContainer = !portfolio.projectContainer">&times;
+                  </span>
                 </button>
 
              <img class="projectInfoImage img-responsive col-md-3"
