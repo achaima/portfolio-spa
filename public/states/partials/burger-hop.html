@@ -1,0 +1,20 @@
+
+<div ng-controller="PortfolioController as portfolio">
+  <div class="project-container">
+
+    <div class="projectPage col-md-8">
+      <div class="image-holder">
+
+      </div>
+       <h1 class="title">{{portfolio.projects[0].title}}</h1>
+       <p>Technology: {{portfolio.projects[0].tags}}</p>
+       <p>{{portfolio.projects[0].desc}}.</p>
+       
+          <em><p>Want to see for yourself?</p></em>
+        <p><img class="icons" ng-src="/images/github.png"/><a href="{{portfolio.projects[0].githubLink}}" target="_blank" class="links">Github</a></p>
+        <p><img class="icons" ng-src="/images/heroku.png"/><a href="{{portfolio.projects[0].herokuLink}}" target="_blank" class="links">Heroku</a></p>
+    </div>
+
+ </div>
+
+</div>

@@ -9,25 +9,19 @@ function MainRouter($stateProvider, $urlRouterProvider) {
         'header@home': { templateUrl: '/states/partials/header.html' }
       }
     })
-    .state('burger-hop', {
-      url: '/burger-hop',
-      templateUrl: '/states/burger-hop.html'
-    })
-    .state('event-finder', {
-      url: '/event-finder',
-      templateUrl: '/states/event-finder.html'
-    })
-    .state('clock', {
-      url: '/clock',
-      templateUrl: '/states/clock.html'
-    })
-    .state('movies', {
-      url: '/movies',
-      templateUrl: '/states/movies.html'
-    })
     .state('profile', {
       url: '/profile',
       templateUrl: '/states/profile.html'
+    })
+    .state('project-viewer', {
+      url: '/project-viewer',
+      views: {
+        '': { templateUrl: '/states/project-viewer.html' },
+        'burger-hop@project-viewer': { templateUrl: '/states/partials/burger-hop.html' },
+        'event-finder@project-viewer': { templateUrl: '/states/partials/event-finder.html' },
+        'clock@project-viewer': { templateUrl: '/states/partials/clock.html' },
+        'movies@project-viewer': { templateUrl: '/states/partials/movies.html' }
+      }
     });
 }
 

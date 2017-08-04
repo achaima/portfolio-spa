@@ -6,30 +6,96 @@
 <!--projects-->
 <div ui-view="header"></div>
 
+<div class="container">
+
 <div ng-controller="PortfolioController as portfolio">
   <h3>PROJECTS</h3>
   <hr class="short-line">
 
 
     <div class="btn-group col-md-offset-2">
-      <button ng-click="portfolio.filter('AngularJS')" type="button" class="btn btn-default">AngularJS</button>
-      <button ng-click="portfolio.filter('Node.js')" type="button" class="btn btn-default">Node.js</button>
-      <button ng-click="portfolio.filter('Express')" type="button" class="btn btn-default">Express</button>
-      <button ng-click="portfolio.filter('Javascript')" type="button" class="btn btn-default">Javascript</button>
-      <button ng-click="portfolio.filter('jQuery')"  type="button" class="btn btn-default">jQuery</button>
-      <button ng-click="portfolio.filter('Firebase')" type="button" class="btn btn-default">Firebase</button>
-      <button ng-click="portfolio.showAll()" type="button" class="btn btn-default">Show all</button>
+      <button ng-click="portfolio.filter('AngularJS')" type="button" class="btn btn-success">AngularJS</button>
+      <button ng-click="portfolio.filter('Node.js')" type="button" class="btn btn-success">Node.js</button>
+      <button ng-click="portfolio.filter('Express')" type="button" class="btn btn-success">Express</button>
+      <button ng-click="portfolio.filter('Javascript')" type="button" class="btn btn-success">Javascript</button>
+      <button ng-click="portfolio.filter('jQuery')"  type="button" class="btn btn-success">jQuery</button>
+      <button ng-click="portfolio.filter('Firebase')" type="button" class="btn btn-success">Firebase</button>
+      <button ng-click="portfolio.showAll()" type="button" class="btn btn-success">All</button>
     </div>
 
 
+<!---PORTFOLIO FIRST DISPLAY-->
+<div class="col-md-12">
 
-  <ul ng-mouseenter="project.gif" ng-mouseleave="show = false" class="portfolioHome">
-    <li ng-repeat="project in portfolio.projects track by $index" class="projectsList">
+  <ul ng-mouseenter="project.gif"
+      ng-mouseleave="show = false"
+      ng-hide="portfolio.projectContainer"
+      class="portfolioHome">
+    <li ng-repeat="project in portfolio.projects track by $index"
+        class="projectsList">
 
-       <div class="portfolioProjectImage {{project.class}}" ng-if="project.visible"            ui-sref="{{project.state}}"></div>
+       <div class="portfolioProjectImage {{project.class}}"
+            ng-if="project.visible"
+            ng-click="portfolio.selectProject(project)">
+            </div>
     </li>
   </ul>
 </div>
+
+  <!---PORTFOLIO INDIVIDUAL PROJECT-->
+
+           <div class="projectInfo projectPage d-flex justify-content-center"
+                ng-show="portfolio.projectContainer"
+                ng-repeat="project in portfolio.projects"
+                ng-if="project.isProjectVisible">
+
+             <img class="projectInfoImage img-responsive col-md-3"
+                  ng-src="{{project.img}}"/>
+
+
+            <div class="col-md-5 projectText">
+              <h3 class="title">{{project.title}}</h3>
+              <p>Technology: {{project.tags}}</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+
+                 <em><p>Want to see for yourself?</p></em>
+               <p><img class="icons" ng-src="/images/github.png"/>
+                 <a href="{{project.githubLink}}" target="_blank" class="links">Github</a></p>
+               <p>
+                 <img class="icons" ng-src="/images/heroku.png"/><a href="{{project.herokuLink}}" target="_blank" class="links">Heroku</a></p>
+            </div>
+
+            <div ng-show="portfolio.projectContainer"  class="col-md-3 projectListContainer">
+                  <div ng-repeat="project in portfolio.projects">
+                    <div ui-view="project.state"
+                         ng-if="project.isProjectVisible" >
+                    </div>
+                  </div>
+
+                    <ul>
+                     <li ng-repeat="project in portfolio.projects track by $index"
+                         class="portfolioList">
+                      <div class="projectsListBox"
+                           ui-sref="{{project.state}}">
+                          <div ng-class="portfolio.imageClass"></div>
+                            <img ng-src="{{project.img}}"
+                                 class="portfolioImage img-responsive"
+                                 ng-click="portfolio.selectProjectFromList(project)"/>
+                            <p class="projectsListTitle">{{project.title}}</p>
+                        </div>
+                       </li>
+                     </ul>
+              </div>
+
+           </div>
+
+
+<!---PORTFOLIO SIDE LIST-->
+
+
+</div>
+
 
 
 
@@ -111,17 +177,14 @@
   </div>
 </div>
 </div>
+</div>
 
 
 
-
-
-
-<!----- ----->
-  <!-- <div id="contact" class="bottom">
+<div id="contact" class="bottom">
     <hr class="longer-line">
   </div>
 
   <div class="copyright">
     <center> © Asma Chaima 2017 </center>
-  </div> -->
+  </div>

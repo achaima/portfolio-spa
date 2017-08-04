@@ -4,8 +4,10 @@ body {
   width: 100%;
   height: 100%;
 }
+
 *{
   font-family: Montserrat;
+
 }
 
 // navigation bar
@@ -74,22 +76,6 @@ p .topnav {
 //home
 
 
-.jumbotron {
-  background-size: cover;
-  text-align: center;
-}
-
-.jumbotron {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    color: inherit;
-    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/d5/e3/4a/d5e34a5a8d2e8d6fc5cc662f2411668a.jpg");
-    background-color: rgba(255,255,255, .2);
-    background-blend-mode: overlay;
-
-}
-
 /*.container .jumbotron, .container-fluid .jumbotron {
     background-image: url("https://s-media-cache-ak0.pinimg.com/736x/d5/e3/4a/d5e34a5a8d2e8d6fc5cc662f2411668a.jpg");
     padding-right: 15px;
@@ -108,24 +94,9 @@ p .topnav {
   text-align: center;
 }
 
-.jumbotron h {
-  font-family: Montserrat;
-  font-size: 30px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.jumbotron p {
-  font-family: Open Sans;
-  font-size: 15px;
-}
-
-
-
-
 //portfolio
 #projects {
-  padding-top: 10px;
+  box-shadow: 0 20px 15px -1px hsla(0,0%,0%,.25);
 }
 
 h3 {
@@ -148,8 +119,6 @@ h3 {
   margin-right: 5px;
   align-items: center;
   letter-spacing: .1em;
-  background-color:rgb(0, 128, 128);
-  border-color: #91c2c1;
   color: white;
   text-shadow: 0.1px 0.1px 0.1px black;
   font-family: Montserrat;
@@ -170,20 +139,28 @@ padding: 50px;
 }
 
 .portfolioProjectImage {
-  margin-top: -5px;
-  height: 320px;
-  width: 340px;
+  margin: 5px;
+  height: 24em;
+  width: 23em;
+  box-shadow: 0 20px 15px -1px hsla(0,0%,0%,.25);
 }
+
 
 .portfolioProjectImage:hover {
-  border: 3px rgba(138,210,219,0.6) solid;
+ -webkit-transition: all 0.30s ease-in-out;
+ -moz-transition: all 0.30s ease-in-out;
+ -ms-transition: all 0.30s ease-in-out;
+ -o-transition: all 0.30s ease-in-out;
+ padding: 3px 0px 3px 3px;
+ margin: 5px 1px 3px 0px;
+ box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+ border: 1px solid rgba(81, 203, 238, 1);
 }
-
 
 
 /* HOME - GIPHY EFFECT*/
 .burger {
-  background: url(../images/BurgerHop.png) center center no-repeat;
+  background: url('http://www.webweaver.nu/clipart/img/misc/food/fast-food/hamburger.png') center center no-repeat;
   background-size: 340px 340px !important;
   background-color: rgba(255,255,255, .2);
   background-blend-mode: overlay;
@@ -249,131 +226,42 @@ padding: 50px;
   transition: background .2s linear;
 }
 
-
-
-//about
-.about {
-  padding-top: 10px;
-  margin: 0 11vh;
-  text-align: center;
-}
-
-.profilePic {
-  width: 140px;
-  height: 140px;
-  border-radius: 70px;
-  border: white solid 2px;
-  display: inline;
-  -ms-transform: rotate(-20deg); /* IE 9 */
-    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
-    transform: rotate(-20deg);
-}
-
-h3 {
-  font-family: Montserrat;
-  font-size: 18px;
-}
-
-p.large-text {
-  text-align: justify;
-  font-family: Open Sans;
-}
-
-//footer
-.bottom {
-  padding-top: 10px;
-  font-family: Montserrat;
-  font-size: 24px;
-  bottom: 0;
-  height: 180px;
-  text-align: center;
-}
-
-.longer-line {
-  margin: 40px;
-}
-
-.fcc-icon {
-  width: 5vh;
-  padding-bottom: 3px;
-}
-
-a {
-  color: inherit;
-}
-
-.icons,
-a:hover {
-  color: inherit;
-  text-decoration: none;
-}
-
-#aw-icon {
-  letter-spacing: 2px;
-}
-
-.copyright {
-  font-family: Open Sans;
-  font-size: 8px;
-  margin: 10px;
-}
-
-
-
+/*PROJECT INFO CONTAINER*/
 .project-container {
   margin-top:90px !important;
 }
 
 .projectPage {
   border: 2px rgba(49,53,53,0.5) solid;
-  width: 70%;
-  margin-right: 0px;
-  border-radius: 10px;
+    display: inline-flex;
+    height: 65vh;
+    width: 84%;
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 
-.projectsListBox {
-  padding: 3.1px;
-  background-color: red;
-  width: 20vw;
-  background-color: rgb(25,112,112);
-}
-
-.projectsListTitle {
-  display: inline;
-  font-family: bold;
-  color: #25a7a7;
-  font-family: Montserrat;
-letter-spacing: 0.3px;
-}
-
-.portfolioImage {
-  display: inline;
-  height: 100px;
-  width: 100px;
-  border: 1px black solid;
-  margin-top: 3px;
-  margin-left: 3px;
-}
-
-.portfolioList {
-  list-style: none;
-}
-
-/*
-.projectSlideshow {
-  border: 1px lightgray solid;
-  width: 400px;
-  height: 400px;
-}*/
-
-.image-holder {
-width: 200px;
-height: 200px;
-background-color: red;
+.projectInfoImage{
+      height: 41.85em;
+      width: 35em;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+      padding-left: 0;
+      display: inline-flex;
+      vertical-align: top;
 }
 
 
+.projectText{
+  padding: 0;
+}
+
+.projectListContainer{
+  padding: 0;
+}
 .links {
   text-decoration: none;
 }
@@ -382,6 +270,33 @@ background-color: red;
   width: 30px;
   height: 25px;
 }
+
+/*SIDE LIST*/
+.portfolioList {
+  list-style: none;
+}
+
+.projectsListBox {
+  border: 1px rgba(49,53,53,0.5) solid;
+}
+
+.projectsListTitle {
+  display: block;
+  font-family: bold;
+  font-family: Montserrat;
+  letter-spacing: 0.2px;
+  margin-left: 5px;
+}
+
+.portfolioImage {
+  display: inline;
+  height: 5em;
+  width: 7em;
+  border: 1px black solid;
+  margin-left: 5px;
+  margin-top: 8px;
+}
+
 
 
 .portfolioList img {
@@ -404,20 +319,16 @@ background-color: red;
 .projectsList {
   list-style: none;
   display: inline-block;
-  color: black;
   background-color: rgba(255,255,255, .2);
   background-blend-mode: overlay;
 }
 
 
-
-
-
 /********************************** PROFILE - ICONS********************************************/
 
-.icon-container img {
+/*.icon-container img {
   margin-right: 20px;
-}
+}*/
 
 .profile-mail {
   height: 75px;
@@ -528,4 +439,68 @@ figure:hover figcaption {
 .list-group li {
   margin-top: 5px;
   margin-bottom: 45px;
+}
+
+
+
+
+//about
+.about {
+  padding-top: 10px;
+  margin: 0 11vh;
+  text-align: center;
+}
+
+.profilePic {
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  border: white solid 2px;
+  display: inline;
+  -ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+    transform: rotate(-20deg);
+}
+
+p.large-text {
+  text-align: justify;
+  font-family: Open Sans;
+}
+
+//footer
+.bottom {
+  font-family: Montserrat;
+  font-size: 24px;
+  bottom: 0;
+  height: 180px;
+  text-align: center;
+}
+
+.longer-line {
+  margin: 40px;
+}
+
+.fcc-icon {
+  width: 5vh;
+  padding-bottom: 3px;
+}
+
+a {
+  color: inherit;
+}
+
+.icons,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+#aw-icon {
+  letter-spacing: 2px;
+}
+
+.copyright {
+  font-family: Open Sans;
+  font-size: 8px;
+  margin: 10px;
 }

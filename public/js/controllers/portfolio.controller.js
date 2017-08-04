@@ -13,7 +13,8 @@ function PortfolioController() {
       tags: 'Javascript, jQuery',
       class: 'burger',
       state: 'burger-hop',
-      visible: true
+      visible: true,
+      isProjectVisible: false
     },
     {
       title: 'Event Finder',
@@ -26,7 +27,8 @@ function PortfolioController() {
       tags: 'Javascript, Node.js, Express, AngularJS',
       class: 'event',
       state: 'event-finder',
-      visible: true
+      visible: true,
+      isProjectVisible: false
     },
     {
       title: 'Movies',
@@ -38,7 +40,8 @@ function PortfolioController() {
       tags: 'Javascript, Node.js, Express',
       class: 'movies',
       state: 'movies',
-      visible: true
+      visible: true,
+      isProjectVisible: false
     },
     {
       title: 'Clock',
@@ -50,28 +53,32 @@ function PortfolioController() {
       tags: 'Javascript, AngularJS',
       class: 'clock',
       state: 'clock',
-      visible: true
+      visible: true,
+      isProjectVisible: false
     },
     {
-      title: 'placeholderOne',
+      title: 'Wedding Project',
       img: '../../images/comingSoon.jpg',
       desc: '',
       githubLink: '',
       herokuLink: '',
       tags: 'HTML',
+      state: 'incomplete',
       class: 'placeholderOne',
-      visible: true
-    },
-    {
-      title: 'placeholderTwo',
-      img: '../../images/comingSoon.jpg',
-      desc: '',
-      githubLink: '',
-      herokuLink: '',
-      tags: 'HTML',
-      class: 'placeholderTwo',
-      visible: true
+      visible: true,
+      isProjectVisible: false
     }
+    // {
+    //   title: 'placeholderTwo',
+    //   img: '../../images/comingSoon.jpg',
+    //   desc: '',
+    //   githubLink: '',
+    //   herokuLink: '',
+    //   tags: 'HTML',
+    //   class: 'placeholderTwo',
+    //   visible: true,
+    //   isProjectVisible: false
+    // }
   ];
 
   controller.filter = function(tech) {
@@ -90,6 +97,33 @@ function PortfolioController() {
       project.visible = true;
     });
   };
+
+  controller.selectProject = function(selectedProject) {
+
+    for(var project of controller.projects) {
+      if(project.state === selectedProject.state) {
+        console.log(selectedProject);
+        project.isProjectVisible = true;
+        controller.projectContainer = !controller.projectContainer;
+      } else {
+        project.isProjectVisible = false;
+      }
+    }
+  };
+
+  controller.selectProjectFromList = function(selectedProject) {
+
+    for(var project of controller.projects) {
+      if(project.state === selectedProject.state) {
+        console.log(selectedProject);
+        project.isProjectVisible = true;
+      } else {
+        project.isProjectVisible = false;
+      }
+    }
+  };
+
+
 
 
   function init() {

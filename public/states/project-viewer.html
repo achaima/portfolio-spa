@@ -1,0 +1,27 @@
+
+<div ng-controller="PortfolioController as portfolio">
+  <div class="project-container">
+
+    <div ng-repeat="project in portfolio.projects">
+      <div ui-view="project.state" ng-if="project.isProjectVisible"></div>
+    </div>
+
+    <div ui-view="burger-hop" ng-if="portfolio.projects[0].isProjectVisible"></div>
+    <div ui-view="movies" ng-if="portfolio.projects[2].isProjectVisible"></div>
+    <div ui-view="clock" ng-if="portfolio.projects[3].isProjectVisible"></div>
+    <div ui-view="event-finder" ng-if="portfolio.projects[1].isProjectVisible"></div>
+
+      <ul class="col-md-offset-8">
+       <li ng-repeat="project in portfolio.projects track by $index" class="portfolioList">
+        <div class="projectsListBox" ui-sref="{{project.state}}">
+            <div ng-class="portfolio.imageClass"></div>
+          <img ng-src="{{project.img}}"
+               class="portfolioImage img-responsive"
+               ng-click="portfolio.selectProject(project.state)"/>
+          <p class="projectsListTitle">{{project.title}}</p>
+        </div>
+       </li>
+     </ul>
+ </div>
+
+</div>
