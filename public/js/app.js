@@ -5,8 +5,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/',
       views: {
-        '': { templateUrl: '/states/home.html' },
-        'header@home': { templateUrl: '/states/partials/header.html' }
+        '': { templateUrl: '/states/home.html' }
       }
     })
     .state('profile', {

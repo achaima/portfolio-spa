@@ -1,122 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open Sans');
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-*{
-  font-family: Montserrat;
-
-}
-
-// navigation bar
-
-.top {
-  position: fixed !important;
-  top: 0px !important;
-}
-
-.navbar-toggle {
-  background-color: transparent;
-  border: none;
-}
-
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle:hover {
-  background-color: white;
-
-}
-
-.navbar,
-container {
-  background:white;
-  min-height: 45px;
-  height: 45px;
-}
-
-.navbar-collapse {
-  text-align: right;
-}
-
-//navigation text
-#navbar {
-  padding-right: 5%;
-}
-
-p .topnav {
-  padding-left: 5%;
-}
-
-.topnav .navbar-brand {
-  font-size: 15px;
-  font-family: Montserrat;
-  letter-spacing: 3px;
-  color: black;
-  text-transform: uppercase;
-}
-
-.topnav ul.nav li a {
-  font-size: 12px;
-  font-family: Montserrat;
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.topnav ul.nav li a:hover {
-  text-decoration: underline;
-}
-
-.mail {
-  width: 20px;
-  height: 20px;
-}
-
-//home
-
-
-/*.container .jumbotron, .container-fluid .jumbotron {
-    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/d5/e3/4a/d5e34a5a8d2e8d6fc5cc662f2411668a.jpg");
-    padding-right: 15px;
-    padding-left: 15px;
-    border-radius: 6px;
-}*/
-.box-container {
-  padding-top: 12vh;
-}
-
-.box {
-  background-color: rgba(255, 255, 255, .8);
-  margin: auto;
-  width: 30vh;
-  padding: 5vh;
-  text-align: center;
-}
-
 //portfolio
-#projects {
-  box-shadow: 0 20px 15px -1px hsla(0,0%,0%,.25);
-}
-
-h3 {
-  text-align: center;
-  font-family: Montserrat;
-  padding: 18px;
-}
-
-.short-line {
-  border-color: #b76e79;
-  width: 4vh;
-}
-
-.btn-group {
-  width: 50vw;
-}
-
 .btn  {
-  margin: 10px;
-  margin-right: 5px;
   align-items: center;
   letter-spacing: .1em;
   color: white;
@@ -134,8 +17,13 @@ h3 {
   color: white;
 }
 
-.portfolioHome {
-padding: 50px;
+.portfolioHomePageUL {
+padding: 0;
+}
+
+.portfolioCards{
+  display: inline;
+  padding: 0;
 }
 
 .portfolioProjectImage {
@@ -227,51 +115,40 @@ padding: 50px;
 }
 
 /*PROJECT INFO CONTAINER*/
-.project-container {
-  margin-top:90px !important;
-}
-
 .projectPage {
+  padding: 0;
   border: 2px rgba(49,53,53,0.5) solid;
-    display: inline-flex;
-    height: 67vh;
-    width: 84%;
-    padding: 0;
-    margin: 0;
-    border-radius: 8px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+  display: inline-flex;
 }
 
 
 .close {
   z-index: 1;
-  margin-left: 5px;
 position: absolute;
 font-size:30px;
 color: red;
-text-shadow: 0 1px 0 #fff;
+text-shadow: 0 1px 0 gray;
 opacity: 1;
 }
 
 .projectInfoImage{
-      height: 40.5em;
-      width: 35em;
+      width: 20vw;
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
       padding-left: 0;
-      display: inline-flex;
+      display: inline-block;
       vertical-align: top;
 }
 
+.col-md-5 {
+  border: red 1px solid;
+}
 
 .projectText{
   padding: 0;
 }
 
-.projectListContainer{
-  padding: 0;
-}
+
 .links {
   text-decoration: none;
 }
@@ -291,26 +168,11 @@ opacity: 1;
 }
 
 .projectsListTitle {
-  display: block;
-  font-family: bold;
-  font-family: Montserrat;
-  letter-spacing: 0.2px;
-  margin-left: 5px;
+  display: inline-flex;
 }
-
-.portfolioImage {
-  display: inline;
-  height: 5em;
-  width: 7em;
-  border: 1px black solid;
-  margin-left: 5px;
-  margin-top: 8px;
-}
-
 
 
 .portfolioList img {
-  margin-bottom: 5px;
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
    -webkit-filter: grayscale(100%);
    -moz-filter: grayscale(100%);
@@ -386,7 +248,7 @@ opacity: 1;
   color: rgb(0, 128, 128);
 }
 
-figure {
+/*figure {
     height: 7em;
     width: 6em;
     -webkit-transform: perspective(500);
@@ -395,7 +257,7 @@ figure {
 }
 figure:hover {
     -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
-}
+}*/
 /*img {
     box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
     display: block;
