@@ -1,3 +1,8 @@
+.cv {
+  margin-top: 13px;
+  height: 8px;
+  color: darkgray;
+}
 //portfolio
 .btn  {
   align-items: center;
@@ -17,19 +22,16 @@
   color: white;
 }
 
-.portfolioHomePageUL {
-padding: 0;
-}
 
 .portfolioCards{
   display: inline;
-  padding: 0;
+  padding: 5px;
 }
 
 .portfolioProjectImage {
   margin: 5px;
-  height: 24em;
-  width: 23em;
+  height: 21em;
+  width: 21em;
   box-shadow: 0 20px 15px -1px hsla(0,0%,0%,.25);
 }
 
@@ -132,7 +134,8 @@ opacity: 1;
 }
 
 .projectInfoImage{
-      width: 20vw;
+      width: 10vw;
+      height: 10vh;
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
       padding-left: 0;
@@ -153,11 +156,6 @@ opacity: 1;
   text-decoration: none;
 }
 
-.icons {
-  width: 30px;
-  height: 25px;
-}
-
 /*SIDE LIST*/
 .portfolioList {
   list-style: none;
@@ -170,7 +168,6 @@ opacity: 1;
 .projectsListTitle {
   display: inline-flex;
 }
-
 
 .portfolioList img {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
@@ -195,184 +192,7 @@ opacity: 1;
   background-blend-mode: overlay;
 }
 
-
-/********************************** PROFILE - ICONS********************************************/
-
-/*.icon-container img {
-  margin-right: 20px;
-}*/
-
-.profile-mail {
-  height: 75px;
-  width: 60px;
-}
-
-.cv {
-  height: 38px;
-}
-
-.ProfileIcon {
-  height: 40px;
-}
-
-
-.skillsUL {
-  padding: 0;
-  margin: 0;
-}
-
-.skillsList {
-  display: inline-block;
-  padding: 0;
-}
-
-.skillImage {
-  width: 40px;
-  height: 50px;
-  margin-right:5px;
-  margin-bottom: 10px;
-  box-shadow: 0 20px 15px -1px hsla(0,0%,0%,.25);
-  display: block;
-  height: 60%;
-  -webkit-transition: .5s;
-}
-
-.skillsTitle {
-  border: 3px solid rgb(0, 128, 128);
-  letter-spacing: 0.1em;
-  font-size: bold;
-  text-transform: uppercase;
-  width: 100px;
-  text-align: center;
-  padding: 7px 2px;
-  color: rgb(0, 128, 128);
-}
-
-/*figure {
-    height: 7em;
-    width: 6em;
-    -webkit-transform: perspective(500);
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: .5s;
-}
-figure:hover {
-    -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
-}*/
-/*img {
-    box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
-    display: block;
-    height: 100%;
-    -webkit-transition: .5s;
-}*/
-figure:hover img {
-    box-shadow: none;
-}
-figcaption {
-    color: #fff;
-    padding: 15px 0px;
-    text-align: center;
-    -webkit-transform: rotateX(-90deg);
-    -webkit-transform-origin: 100% 0;
-    -webkit-transition: .5s;
-}
-figure:hover figcaption {
-    box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
-    color: #222;
-}
-
-
-.interestsTitle {
-  border: 3px solid rgb(0, 128, 128);
-  letter-spacing: 0.1em;
-  font-size: bold;
-  text-transform: uppercase;
-  width: 140px;
-  text-align: center;
-  padding: 7px 2px;
-  color: rgb(0, 128, 128);
-}
-
-
-
-
-.col-md-offset-6 {
-  margin-left: 0px;
-}
-
-
-.col-md-offset-9 {
-  margin-left: 0px;
-}
-
-.list-group {
-  list-style: none;
-}
-
-.list-group li {
-  margin-top: 5px;
-  margin-bottom: 45px;
-}
-
-
-
-
-//about
-.about {
-  padding-top: 10px;
-  margin: 0 11vh;
-  text-align: center;
-}
-
-.profilePic {
-  width: 140px;
-  height: 140px;
-  border-radius: 70px;
-  border: white solid 2px;
-  display: inline;
-  -ms-transform: rotate(-20deg); /* IE 9 */
-    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
-    transform: rotate(-20deg);
-}
-
-p.large-text {
-  text-align: justify;
-  font-family: Open Sans;
-}
-
-//footer
-.bottom {
-  font-family: Montserrat;
-  font-size: 24px;
-  bottom: 0;
-  height: 180px;
-  text-align: center;
-}
-
-.longer-line {
-  margin: 40px;
-}
-
-.fcc-icon {
-  width: 5vh;
-  padding-bottom: 3px;
-}
-
-a {
-  color: inherit;
-}
-
-.icons,
-a:hover {
-  color: inherit;
-  text-decoration: none;
-}
-
-#aw-icon {
-  letter-spacing: 2px;
-}
-
-.copyright {
-  font-family: Open Sans;
-  font-size: 8px;
-  margin: 10px;
+.icons {
+  width: 20px;
+  height: 20px;
 }
