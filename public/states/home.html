@@ -1,8 +1,6 @@
 
 
 <!--projects-->
-
-
 <div class="container py-5">
 
  <div class="row">
@@ -12,49 +10,48 @@
   <h3 class="display-5 text-center py-4 text-uppercase">projects</h3>
   <hr>
 
-<div class="row justify-content-md-center">
+<div class=" row justify-content-md-center col-md-12">
 
-    <div class="btn-group-justified skillButtons"
+    <div class="btn-group-justified"
          ng-hide="portfolio.projectContainer">
 
       <button type="button"
-              class="btn btn-secondary"
+              class="btn btn-success"
               ng-click="portfolio.filter('AngularJS')">AngularJS
       </button>
       <button type="button"
-              class="btn btn-secondary"
+              class="btn btn-success"
               ng-click="portfolio.filter('Node.js')">Node.js
       </button>
       <button type="button"
-              class="btn btn-secondary"
+              class="btn btn-success"
               ng-click="portfolio.filter('Express')">Express
       </button>
       <button type="button"
-              class="btn btn-secondary"
+              class="btn btn-success"
               ng-click="portfolio.filter('Javascript')">Javascript
       </button>
       <button type="button"
-              class="btn btn-secondary"
+              class="btn btn-success"
               ng-click="portfolio.filter('jQuery')">jQuery
       </button>
       <button type="button"
-              class="btn btn-secondary"
+              class="btn btn-success"
               ng-click="portfolio.filter('Firebase')">Firebase
       </button>
       <button type="button"
-              class="btn btn-secondary"
+              class="btn btn-success"
               ng-click="portfolio.showAll()">All
       </button>
     </div>
 
 
 <!---PORTFOLIO FIRST DISPLAY-->
-<div class="row">
 
   <ul ng-mouseenter="project.gif"
       ng-mouseleave="show = false"
       ng-hide="portfolio.projectContainer"
-      class="portfolioHomePageUL">
+      class="row">
 
       <div class="portfolioCards">
           <li class="projectsList"
@@ -70,7 +67,6 @@
 
   </ul>
 
-</div>
 
   <!---PORTFOLIO INDIVIDUAL PROJECT-->
 
@@ -79,22 +75,22 @@
            ng-repeat="project in portfolio.projects"
            ng-if="project.isProjectVisible">
 
-                <!-- <button type="button" class="close" aria-label="Close" >
+                <button type="button" class="close" aria-label="Close" >
                   <span aria-hidden="true"
                         ng-click="portfolio.projectContainer = !portfolio.projectContainer">&times;
                   </span>
-                </button> -->
+                </button>
 
-           <div class="col-md-5">
+           <div class="col-md-5 imageDiv">
               <img class="projectInfoImage rounded float-left img-responsive"
                    ng-src="{{project.img}}"/>
           </div>
 
 
-            <div class="col-md-5 projectText">
-              <h3 class="title">{{project.title}}</h3>
-                <p>Technology: {{project.tags}}</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="col-md-6 projectText">
+              <h3 class="title text-center">{{project.title}}</h3>
+                <em class="projectInformationText">Technology: {{project.tags}}</em>
+                <p class="projectInformationText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
                 <em><p>Want to see for yourself?</p></em>
                 <p>

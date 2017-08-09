@@ -18,7 +18,7 @@ function PortfolioController() {
     },
     {
       title: 'Event Finder',
-      img: '../../images/event-finder.png',
+      img: '../../images/eventFinder.png',
       gif: '../../images/event-finder.gif',
       desc: '',
       duration: '1 week',
@@ -30,19 +30,20 @@ function PortfolioController() {
       visible: true,
       isProjectVisible: false
     },
-    {
-      title: 'Movies',
-      img: '../../images/Movies.png',
-      desc: '',
-      duration: '1 week',
-      githubLink: '',
-      herokuLink: '',
-      tags: 'Javascript, Node.js, Express',
-      class: 'movies',
-      state: 'movies',
-      visible: true,
-      isProjectVisible: false
-    },
+    // {
+    //   title: 'Movies',
+    //   img: '../../images/Movies.png',
+    //   gif: '../../images/MovieReview.gif',
+    //   desc: '',
+    //   duration: '1 week',
+    //   githubLink: '',
+    //   herokuLink: '',
+    //   tags: 'Javascript, Node.js, Express',
+    //   class: 'movies',
+    //   state: 'movies',
+    //   visible: true,
+    //   isProjectVisible: false
+    // },
     {
       title: 'Clock',
       img: '../../images/clock.png',
@@ -57,7 +58,7 @@ function PortfolioController() {
       isProjectVisible: false
     },
     {
-      title: 'Wedding Project',
+      title: 'Wedding',
       img: '../../images/comingSoon.jpg',
       desc: '',
       githubLink: '',
